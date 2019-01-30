@@ -1895,7 +1895,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c9f106;
+  background: #b9ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2996,4 +2996,11 @@ ul.breadcrumb li+li:last-child {
   .post-body {
     text-align: justify;
   }
+}
+body {
+  background: url("https://raw.githubusercontent.com/PGL888999/photo/master/cc.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
