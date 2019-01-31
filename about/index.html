@@ -74,7 +74,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '6.7.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -104,7 +104,7 @@
 <meta property="og:description" content="Life is a train that travels forward, and every day is a new starting point. Looking back, it is the road that the checkpoints have passed, and the beautiful future; not to immerse a beautiful scenery">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/PGL888999/photo/master/q%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97.jpg">
-<meta property="og:updated_time" content="2019-01-30T20:57:45.153Z">
+<meta property="og:updated_time" content="2019-01-31T11:30:22.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="about">
 <meta name="twitter:description" content="Life is a train that travels forward, and every day is a new starting point. Looking back, it is the road that the checkpoints have passed, and the beautiful future; not to immerse a beautiful scenery">
@@ -238,7 +238,7 @@
 
     
 
-    <a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-info"></i> <br>关于</a>
 
   </li>
         
@@ -255,7 +255,7 @@
 
     
 
-    <a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
         
@@ -272,7 +272,7 @@
 
     
 
-    <a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -290,6 +290,40 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-programs-club">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/programs-club/" rel="section"><i class="menu-item-icon fa fa-fw fa-code"></i> <br>编程社</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-message">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/message/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>message</a>
 
   </li>
 
@@ -322,6 +356,12 @@
             
 
     
+    
+      
+      
+    
+      
+      
     
       
       
@@ -394,10 +434,6 @@
 
           </div>
           
-
-  
-
-
 
         </div>
         
@@ -592,6 +628,8 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
@@ -684,9 +722,36 @@
 
 
   
-
-
   
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '75jmvzmmExKmGFfcQpbCshbi-gzGzoHsz',
+    appKey: 'VVjbJdsn2rwR7r72TRvU3mIj',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
+
 
 
   
